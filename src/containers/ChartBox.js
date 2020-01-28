@@ -6,8 +6,7 @@ class ChartBox extends Component{
     constructor(props){
         super(props);
         this.state = {
-            itunesChart: {},
-            chart: {}
+            chart: []
 
         }
     }
@@ -17,10 +16,13 @@ class ChartBox extends Component{
 
         fetch(url)
         .then(res => res.json())
-        .then(itunesChart => this.setState({itunesChart: itunesChart}))
+        .then(itunesChart => this.setState({chart: itunesChart.feed.entry}))
+        
     }
 
     render(){
+
+    
         return(
             <div className="chart-box">
                 <h1>UK TOP 20</h1>
