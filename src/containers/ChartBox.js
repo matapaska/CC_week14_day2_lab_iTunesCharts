@@ -26,7 +26,7 @@ class ChartBox extends Component{
         return(
             <div className="chart-box">
                 <h1>UK TOP 20</h1>
-                {/* <ChartList/> */}
+                <ChartList data={this.state.chart}/>
             </div>
         )
     }
